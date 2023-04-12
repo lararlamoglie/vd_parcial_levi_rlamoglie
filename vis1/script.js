@@ -4,6 +4,7 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
 })
 
 d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
+  data = data.filter(d => ['Balvanera', 'Palermo', 'Saavedra',].includes(d.domicilio_barrio));
   console.log(data.length)
 
   let chart = Plot.plot({
@@ -14,23 +15,25 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
       tickFormat: d => d3.timeFormat('%B')(new Date(2021, d - 1, 1))
     },
     y: {
-      domain: [-50,900]
+      domain: [0,60]
     },
     
     marks: [
       Plot.line(data, Plot.binY({y: "count"},{
         x: "mes_prestacion",
-        stroke: "estacion",
+        stroke: "domicilio_barrio",
         strokeWidth: 2,
+        z: "domicilio_barrio",
+        curve: "catmull-rom",
       })),
       Plot.dot(data, Plot.binY({y: "count"},{
         x: "mes_prestacion",
-        fill: "estacion",
+        z: "domicilio_barrio",
+        fill: "domicilio_barrio",
         r:5,
       }))
     ],
     color:{
-      range: ["#8A87DA","#DF893E","#A6E49D","#F6FF9A"]
     }
   })
   // Agregamos chart al div#chart de index.html
