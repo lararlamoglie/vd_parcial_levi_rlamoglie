@@ -14,25 +14,17 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
     marginRight: 100,
     y: {
       label: "",
-      //domain: ["00 - 03 hs","4-7", "8-11", "12-15", "16-19", "20-23"]
     },
     x:{
-      domain: [0,60],
-    },
-    facet:{
-      data:data,
-      y: "domicilio_barrio",
-      label: "",
-    },
-    fy:{
-      padding: 0.1,
+      domain: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     },
     marks: [
-      Plot.barX(data,
-        Plot.binX(
-          {x: 'count',},
+      Plot.barY(data,
+        Plot.binY(
+          {y: 'count',},
           {
-            y: 'hora_agrupada', thresholds: 10,
+            x: 'dia_sem',
+            fill: "domicilio_barrio",
           },
         ),
       ),
