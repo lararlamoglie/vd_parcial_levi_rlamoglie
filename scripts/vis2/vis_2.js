@@ -17,6 +17,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
       //domain: ["00 - 03 hs","4-7", "8-11", "12-15", "16-19", "20-23"]
     },
     x:{
+      label: "Soliciudes de desratización",
       domain: [0,60],
     },
     facet:{
@@ -27,6 +28,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
     fy:{
       padding: 0.1,
     },
+   
     marks: [
       Plot.text(data,{
         text: d => d.domicilio_barrio,
@@ -42,6 +44,19 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
       ),
       Plot.ruleY([0]),
     ],
+    style: {
+      fontSize: 22,
+      
+    },
+    marginLeft: 60,
+    marginBottom: 65,
+    marginRight: 106,
+    marginTop:25,
+    insetTop: 0,
+    insetLeft: 0,
+    insetRight: 1,
+    width: 1300,
+    height: 700,
 
   })
   // Agregamos chart al div#chart de index.html

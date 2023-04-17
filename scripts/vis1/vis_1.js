@@ -28,11 +28,16 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       //tickFormat: d => d3.timeFormat('%B')(new Date(2021, d - 1, 1))
     },
     y: {
-      domain: [0,30]
+      label: "Solicitudes de desratización",
+      labelOffset: 90,
+      domain: [0,30],
+     
+      
     },
     
     marks: [
       Plot.line(data, Plot.binY({y: "count"},{
+        
         x: "mes_prestacion",
         stroke: "domicilio_barrio",
         strokeWidth: 2,
@@ -40,6 +45,7 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         curve: "catmull-rom",
       })),
       Plot.dot(data, Plot.binY({y: "count"},{
+      
         x: "mes_prestacion",
         z: "domicilio_barrio",
         fill: "domicilio_barrio",
@@ -47,7 +53,21 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       }))
     ],
     color:{
-    }
+    },
+
+    style:{
+      
+      fontSize: 30,
+    },
+    marginLeft: 100,
+    marginBottom: 100, 
+    marginRight: 30,
+    marginTop:60,
+    insetTop: 0,
+    insetLeft: 0,
+    insetRight: 2,
+    width: 1300,
+    height: 700,
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#vis1').append(() => chart)

@@ -13,11 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&display=swap" rel="stylesheet">
 
+
+
+
+
   </head>
   <body>
     <section>
         <h1>Presencia de ratas en CABA </h1>
-        <h2>Variación según tipo de barrio: Palermo, Balvanera y Saavedra</h2>
+        <h2>Variación según tipo de barrio: <mark style="color:hwb(37 13% 0%);background-color:white;"> Palermo</mark>,
+        <mark style="color:#2125ff;background-color:white;"> Balvanera</mark> y <mark style="color:hwb(308 21% 1%);background-color:white;"> Saavedra </mark></h2>
 
         <p>
           Realizamos un análisis de los datos de denuncias al 147 por avistamientos de ratas. Nuestro interés se centra en
@@ -26,80 +31,64 @@
           residencial y de parques, y por último Balvanera, barrio de microcentro en zona de eficios y oficinas. 
       </p>
 
+  
+      </style>
 
-        <h3>Franja horaria de avistamiento</h3>
+        <h3>Picos de avistamientos de ratas en Marzo y Noviembre</h3>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker 
-            including versions of Lorem Ipsum.
+          
+            Con los datos que proporciona la Ciudad de Buenos Aires, filtramos la frecuencia de solicitudes de 
+            desratización de acuerdo al mes en cual se hicieron. 
+            
         </p>
+        
+        <div style="border: 1px solid black; padding: 15px; width: 500px; height: 200px;">
+          <div class="chart" id="vis_1"> </div>
+        
+        </div>
 
-        <div class="chart" id="vis_1"></div>
+       
 
         <p>
-            There are many variations of <em> passages of Lorem</em> Ipsum available, but the majority
-            have suffered alteration in some form, by injected humour, or randomised words 
-            which don't look even slightly believable. If you are going to use a passage of 
-            Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-            middle of text. 
+          Podemos ver como en determinados meses las solicitudes aumentan significativamente.
+          Marzo, Junio y Noviembre parecen ser 
+          los meses mas complicados en invasión de roedores en Palermo y Balvanera mientras que Saavedra 
+          se mantiene mas estable a lo largo del año.
         </p>
-
-        <h3>Avistamientos por mes del año</h3>
+       
+        <h3>Existen horarios populares para hacer solicitudes</h3>
+    
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker 
-            including versions of Lorem Ipsum.
+            Para esta ocasión, comparamos la frecuencia de solicitudes de desratización en los distintos horarios del dia.
+            En este caso los tres barrios tienen un comportamiento similar en cuanto a horarios favoritos.
         </p>
-        <div  class="chart" id="vis_2"></div>
-        <small>Contrary to popular belief, Lorem Ipsum is not simply random text.</small>
+        <div  class="chart" id="vis_2"></div> 
+        
+        <small>Las cantidades de prestaciones en cada barrio son muy diferentes.</small>
         
         <p>
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+            
         </p>
 
-        <h3>Ubicación geográfica de los avistamientos</h3>
+        <h3> Las ubicaciones favoritas de los roedores son cerca de []</h3></h3>
 
         <div class="chartMap" id="vis3"></div>
+        <div class="chartMap" id="vis4"></div>
+        <div class="chart" id="vis5"></div>
 
-
-        <p>
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+        <p></p>
         </p>
 
         <div class="chartMap" id="vis4"></div>
         <div class="chart" id="vis5"></div>
     </section>
-    <hr>
-    <p>Fuente: It is a long established fact</p>
-    <p>Autor: Lara</p>
+    <h5>
+
+    <p>Fuente: Sistema Único de Atención Ciudadana de la Ciudad de Buenos Aires.
+    </p>
+    <p>Autor: Lara Rodrigues La Moglie y Chantal Levi</p>
+</h5>
+  
 
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
