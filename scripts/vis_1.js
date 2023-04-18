@@ -24,16 +24,20 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
     width:1000,
     height:400,
     x: {
-      //domain: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]
+      //domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" ],
       //tickFormat: d => d3.timeFormat('%B')(new Date(2021, d - 1, 1))
+      label: "Mes",
+      //tickFormat: d3.utcFormat("%b"),
     },
     y: {
-      domain: [0,30]
+      domain: [0,40],
+      label: "",
     },
     
     marks: [
       Plot.line(data, Plot.binY({y: "count"},{
         x: "mes_prestacion",
+        //x: d => d3.utcFormat("%b")(new Date(d.fecha_ingreso)),
         stroke: "domicilio_barrio",
         strokeWidth: 2,
         z: "domicilio_barrio",
@@ -41,10 +45,12 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       })),
       Plot.dot(data, Plot.binY({y: "count"},{
         x: "mes_prestacion",
+        //x: d => d3.utcFormat("%b")(new Date(d.fecha_ingreso)),
         z: "domicilio_barrio",
         fill: "domicilio_barrio",
         r:5,
-      }))
+      })),
+      Plot.ruleY([0])
     ],
     color:{
     }
