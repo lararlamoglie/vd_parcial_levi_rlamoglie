@@ -1,8 +1,7 @@
-const mapaFetch = d3.json('barrios-caba2.geojson')
-const dataFetch = d3.dsv(';', '147_desratizacion.csv', d3.autoType)
+const dataFetch4 = d3.dsv(';', '147_desratizacion.csv', d3.autoType)
   .then(data => data.filter(d => d.domicilio_barrio === "BALVANERA"))
 
-Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
+Promise.all([mapaFetch, dataFetch4]).then(([barrios, data]) => {
   let chartMap = Plot.plot({
     // https://github.com/observablehq/plot#projection-options
     projection: {
