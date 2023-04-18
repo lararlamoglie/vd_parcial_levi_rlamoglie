@@ -8,15 +8,10 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
   data = data.filter(d => ['LIMPIEZA Y RECOLECCIÓN'].includes(d.categoria));
  
 
-  const dayOfWeekMap = {
-    'Monday': 1,
-    'Tueday': 2,
-    'Wednesday': 3,
-    'Thursday': 4,
-    'Friday': 5,
-    'Saturday': 6,
-    'Sunday': 7
-  };
+  const monthNames = [
+    'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+    'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'
+  ];
 
   console.log(data.length)
 
@@ -26,11 +21,11 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
     x: {
       //domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" ],
       //tickFormat: d => d3.timeFormat('%B')(new Date(2021, d - 1, 1))
-      label: "Mes",
-      //tickFormat: d3.utcFormat("%b"),
+      label: "",
+      tickFormat: d => monthNames[d -1],
     },
     y: {
-      domain: [0,40],
+      domain: [0,35],
       label: "",
     },
     
@@ -50,10 +45,12 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         fill: "domicilio_barrio",
         r:5,
       })),
-      Plot.ruleY([0])
+      Plot.ruleY([0]),
     ],
     color:{
-    }
+      range: ["#fcaf38","#50a3a4" ,"#f95335" ]
+    },
+    //grid:true,
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#vis_1').append(() => chart)

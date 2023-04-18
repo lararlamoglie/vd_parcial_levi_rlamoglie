@@ -18,6 +18,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
     },
     x:{
       domain: [0,60],
+      label: "",
     },
     facet:{
       data:data,
@@ -37,9 +38,13 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
           },
         ),
       ),
-      Plot.ruleY([0]),
     ],
-
+    color:{
+      range: ["#fcaf38","#50a3a4" ,"#f95335" ]
+    },
+    style:{
+      fontSize: 12,
+    },
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#vis_2').append(() => chart)

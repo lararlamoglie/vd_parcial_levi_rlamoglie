@@ -17,14 +17,15 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       Plot.dot(data, {
         x: 'lon',
         y: 'lat',
-        r: 6,
+        r: 2,
         stroke: 'estado_del_contacto',
         fill: 'estado_del_contacto'
       }),
     ],
     color:{
-      range: ["#FFFFF", "#F0f"]
-    }
+      range: ["#FFFFF", "#f95335"]
+    },
+    width:300,
     
   })
 
