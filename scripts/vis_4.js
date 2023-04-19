@@ -12,7 +12,6 @@ Promise.all([mapaFetch2, dataFetch4]).then(([barrios, data]) => {
     marks: [
       Plot.geo(barrios, {
         stroke: '#000',
-        title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
       Plot.dot(data, {
         x: 'lon',
