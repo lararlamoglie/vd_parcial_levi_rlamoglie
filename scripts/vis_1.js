@@ -25,7 +25,7 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       tickFormat: d => monthNames[d -1],
     },
     y: {
-      domain: [0,35],
+      domain: [1,35],
       label: "",
     },
     
@@ -45,11 +45,14 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         fill: "domicilio_barrio",
         r:5,
       })),
-      Plot.ruleY([0]),
+      Plot.ruleY([1]),
     ],
     color:{
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]
     },
+    style:{
+      fontSize: 15,
+    }
     //grid:true,
   })
   // Agregamos chart al div#chart de index.html
