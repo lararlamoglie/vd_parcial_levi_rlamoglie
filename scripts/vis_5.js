@@ -23,9 +23,11 @@ Promise.all([mapaFetch3, dataFetch5]).then(([barrios, data]) => {
       }),
     ],
     color:{
-      range:["#ff", "#50a3a4"]
+      range:["#ff", "#50a3a4"],
+      legend: true,
     },
     width: 300,
+    height: 250,
   })
   /* Agregamos al DOM la visualización chartMap */
   d3.select('#vis5').append(() => chartMap)

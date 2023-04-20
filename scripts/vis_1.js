@@ -43,7 +43,7 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         //x: d => d3.utcFormat("%b")(new Date(d.fecha_ingreso)),
         z: "domicilio_barrio",
         fill: "domicilio_barrio",
-        r:5,
+        r:4,
       })),
       Plot.ruleY([1]),
     ],
@@ -51,7 +51,7 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]
     },
     style:{
-      fontSize: 15,
+      fontSize: 19,
     }
     //grid:true,
   })

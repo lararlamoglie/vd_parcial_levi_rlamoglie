@@ -22,9 +22,11 @@ Promise.all([mapaFetch2, dataFetch4]).then(([barrios, data]) => {
       }),
     ],
     color:{
-      range: ["#FF", "#fcaf38"]
+      range: ["#FF", "#fcaf38"],
+      legend: true,
     },
     width:300,
+    height: 250,
   })
 
   /* Agregamos al DOM la visualización chartMap */
