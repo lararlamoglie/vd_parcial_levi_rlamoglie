@@ -46,7 +46,16 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         r:4,
       })),
       Plot.ruleY([1]),
+      Plot.text(data, {
+        x:"mes_prestacion", 
+        y:"prestacion", 
+        text: ["30"], 
+        fontSize: 14,
+        dx: 555, 
+        dy: -29,
+        fill: "AFF05B",}),
     ],
+    
     color:{
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]
     },

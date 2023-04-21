@@ -11,7 +11,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
     width: 1000,
     height: 500,
     marginLeft: 80,
-    marginRight: 100,
+    marginRight: 130,
     y: {
       label: "",
       //domain: ["00 - 03 hs","4-7", "8-11", "12-15", "16-19", "20-23"]
@@ -49,13 +49,14 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
             dy: 68,
           },
         ),
-      )
+      ),
+    
     ],
     color:{
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]
     },
     style:{
-      fontSize: 14,
+      fontSize: 15,
     },
   })
   // Agregamos chart al div#chart de index.html
