@@ -66,17 +66,17 @@ header {
   .container {
     margin-top: 20px;
     overflow: auto;
-    margin-left: 100px;
+    margin-left: 70px;
 
 
   }
   
   .chartx {
-    height: 300px;
+    height: 400px;
     display: inline-block;
-    margin-bottom: 20px;
-    margin-right: 60px;
-
+    margin-bottom: 0px;
+    margin-right: 0px;
+    text-align: center;
   }
 
   span{

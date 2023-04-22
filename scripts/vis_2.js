@@ -43,14 +43,39 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
           {x: 'count',},
           {
             y: 'hora_agrupada',
-            fill: 'domicilio_barrio',
-            text: ["27"],
-            dx: 280,
-            dy: 68,
+            fill: '#fcaf38',
+            text: ["24"],
+            dx: 264,
+            dy: 65,
           },
         ),
       ),
-    
+      Plot.text(data,
+        Plot.binX(
+          {x: 'count',},
+          {
+            y: 'hora_agrupada',
+            fill: '#f95335',
+            fy: ["Saavedra"],
+            text: ["15"],
+            dx: 198,
+            dy:1,
+          },
+        ),
+      ),
+      Plot.text(data,
+        Plot.binX(
+          {x: 'count',},
+          {
+            y: 'hora_agrupada',
+            fill: '#50a3a4',
+            fy: ["Palermo"],
+            text: ["58"],
+            dx:766,
+            dy:-1,
+          },
+        ),
+      ),
     ],
     color:{
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]

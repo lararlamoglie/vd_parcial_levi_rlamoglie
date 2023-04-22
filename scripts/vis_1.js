@@ -28,6 +28,7 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
       domain: [1,35],
       label: "",
     },
+    //marginRight: 50,
     
     marks: [
       Plot.line(data, Plot.binY({y: "count"},{
@@ -46,14 +47,30 @@ d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
         r:4,
       })),
       Plot.ruleY([1]),
-      Plot.text(data, {
-        x:"mes_prestacion", 
-        y:"prestacion", 
-        text: ["30"], 
-        fontSize: 14,
-        dx: 555, 
-        dy: -29,
-        fill: "AFF05B",}),
+      Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
+        x: "mes_prestacion",
+        z: "domicilio_barrio",
+        dx: 0,
+        dy: -16,
+        text: ["14"],
+        fill: "#fcaf38",
+      })),
+      Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
+        x: "mes_prestacion",
+        z: "domicilio_barrio",
+        dx: 0,
+        dy: -122,
+        text: ["24"],
+        fill: "#50a3a4",
+      })),
+      Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
+        x: "mes_prestacion",
+        z: "domicilio_barrio",
+        dx: 0,
+        dy: 44,
+        text: ["8"],
+        fill: "#f95335" ,
+      })),
     ],
     
     color:{

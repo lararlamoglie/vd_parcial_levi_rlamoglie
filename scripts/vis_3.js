@@ -30,7 +30,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     height: 300,
     style:{
       fontSize: 17,
-    }
+    },
     
   })
 
