@@ -1,5 +1,5 @@
-const mapaFetch = d3.json('barrios-caba.geojson')
-const dataFetch = d3.dsv(';', '147_desratizacion.csv', d3.autoType)
+const mapaFetch = d3.json('../data/barrios-caba.geojson')
+const dataFetch = d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType)
   .then(data => data.filter(d => d.domicilio_barrio === "SAAVEDRA"))
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {

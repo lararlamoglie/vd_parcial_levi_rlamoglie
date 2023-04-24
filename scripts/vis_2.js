@@ -3,8 +3,8 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
   d3.timeFormatDefaultLocale(locale)
 })
 
-d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
-  data = data.filter(d => ['Balvanera', 'Palermo', 'Saavedra',].includes(d.domicilio_barrio));
+d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
+  data = data.filter(d => ['BALVANERA', 'PALERMO', 'SAAVEDRA',].includes(d.domicilio_barrio));
   console.log(data.length)
 
   let chart = Plot.plot({
@@ -17,7 +17,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
       //domain: ["00 - 03 hs","4-7", "8-11", "12-15", "16-19", "20-23"]
     },
     x:{
-      domain: [0,60],
+      domain: [0,85],
       label: "",
     },
     facet:{
@@ -33,7 +33,7 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
         Plot.binX(
           {x: 'count',},
           {
-            y: 'hora_agrupada', thresholds: 10,
+            y: 'hora_agrupada',
             fill: 'domicilio_barrio',
           },
         ),
@@ -44,9 +44,10 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
           {
             y: 'hora_agrupada',
             fill: '#fcaf38',
-            text: ["24"],
-            dx: 264,
+            text: ["37"],
+            dx: 274,
             dy: 65,
+            fontSize: 18,
           },
         ),
       ),
@@ -56,10 +57,11 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
           {
             y: 'hora_agrupada',
             fill: '#f95335',
-            fy: ["Saavedra"],
-            text: ["15"],
-            dx: 198,
-            dy:1,
+            fy: ["SAAVEDRA"],
+            text: ["24"],
+            dx: 228,
+            dy:-22,
+            fontSize: 18,
           },
         ),
       ),
@@ -69,10 +71,11 @@ d3.dsv(',', '147_desratizacion_.csv', d3.autoType).then(data => {
           {
             y: 'hora_agrupada',
             fill: '#50a3a4',
-            fy: ["Palermo"],
-            text: ["58"],
-            dx:766,
-            dy:-1,
+            fy: ["PALERMO"],
+            text: ["77"],
+            dx:720,
+            dy:-22,
+            fontSize: 18,
           },
         ),
       ),

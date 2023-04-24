@@ -3,7 +3,7 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
   d3.timeFormatDefaultLocale(locale)
 })
 
-d3.dsv(',', '147_desratizacion_act.csv', d3.autoType).then(data => {
+d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
   data = data.filter(d => ['BALVANERA', 'PALERMO', 'SAAVEDRA',].includes(d.domicilio_barrio));
   data = data.filter(d => ['LIMPIEZA Y RECOLECCIÓN'].includes(d.categoria));
  
