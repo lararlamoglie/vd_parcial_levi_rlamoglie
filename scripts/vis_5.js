@@ -24,7 +24,6 @@ Promise.all([mapaFetch3, dataFetch5]).then(([barrios, data]) => {
     ],
     color:{
       range:["#ff", "#50a3a4"],
-      legend: true,
     },
     width: 300,
     height: 250,
