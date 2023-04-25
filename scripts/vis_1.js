@@ -50,7 +50,7 @@ d3.dsv(',', 'https://lararlamoglie.github.io/vd_parcial_levi_rlamoglie/data/147_
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
         z: "domicilio_barrio",
-        dx: -168,
+        dx: -170,
         dy: -26,
         text: ["15"],
         fill: "#fcaf38",
