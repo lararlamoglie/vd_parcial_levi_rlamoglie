@@ -28,7 +28,7 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
       domain: [1,35],
       label: "",
     },
-    //marginRight: 50,
+    //marginRight: 40,
     
     marks: [
       Plot.line(data, Plot.binY({y: "count"},{
@@ -50,9 +50,9 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
         z: "domicilio_barrio",
-        dx: 0,
-        dy: -16,
-        text: ["14"],
+        dx: -168,
+        dy: -26,
+        text: ["15"],
         fill: "#fcaf38",
         fontWeight: "600",
 
@@ -60,23 +60,22 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
         z: "domicilio_barrio",
-        dx: 0,
-        dy: -122,
-        text: ["24"],
+        dx: -85,
+        dy: -160,
+        text: ["28"],
         fill: "#50a3a4",
         fontWeight: "600",
       })),
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
         z: "domicilio_barrio",
-        dx: 0,
-        dy: 44,
-        text: ["8"],
+        dx: -85,
+        dy: -15,
+        text: ["14"],
         fill: "#f95335" ,
         fontWeight: "600",
       })),
-    ],
-    
+    ],    
     color:{
       range: ["#fcaf38","#50a3a4" ,"#f95335" ]
     },

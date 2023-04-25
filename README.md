@@ -13,7 +13,7 @@ Tomamos algunas decisiones generales para mantener una armonía y cohesión entr
 
 <h2>Gráfico 1:</h2>
 
-<p> En el primer gráfico agrupamos la cantidad de denuncias de avistamientos de acuerdo al mes, a modo de analizar las fechas de las denuncias de una manera generalizada. Para visualizar los datos obtenidos, utilizamos la marca línea, ya que buscamos describir una evolución en el tiempo. También utilizamos la marca punto para facilitar la visualización de las cantidades en cada mes. Como canal utilizamos el color de cada línea para distinguir el atributo categórico ‘barrio’. Otro canal utilizado es la posición en relación al eje y, el cual denota cantidad. Agregamos el dato de … (NÚMEROS)</p>
+<p> En el primer gráfico agrupamos la cantidad de denuncias de avistamientos de acuerdo al mes, a modo de analizar las fechas de las denuncias de una manera generalizada. Para visualizar los datos obtenidos, utilizamos la marca línea, ya que buscamos describir una evolución en el tiempo. También utilizamos la marca punto para facilitar la visualización de las cantidades en cada mes. Como canal utilizamos el color de cada línea para distinguir el atributo categórico ‘barrio’. Otro canal utilizado es la posición en relación al eje y, el cual denota cantidad. Agregamos el dato del valor máximo de denuncias por cada barrio, para destacar como estos suceden en la primavera.</p>
 
 <h2>Gráfico 2:</h2>
 
