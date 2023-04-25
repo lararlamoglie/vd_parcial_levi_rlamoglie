@@ -54,6 +54,8 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
         dy: -16,
         text: ["14"],
         fill: "#fcaf38",
+        fontWeight: "600",
+
       })),
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
@@ -62,6 +64,7 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
         dy: -122,
         text: ["24"],
         fill: "#50a3a4",
+        fontWeight: "600",
       })),
       Plot.text(data.filter(d => d.mes_prestacion === 12), Plot.binY({y: "count"},{
         x: "mes_prestacion",
@@ -70,6 +73,7 @@ d3.dsv(',', '../data/147_desratizacion.csv', d3.autoType).then(data => {
         dy: 44,
         text: ["8"],
         fill: "#f95335" ,
+        fontWeight: "600",
       })),
     ],
     

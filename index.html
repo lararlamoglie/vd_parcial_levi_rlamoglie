@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Métricas.ong</title>
-
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
     
@@ -19,10 +18,10 @@
 
   </head>
   <header>
-    <div class="header-right">
+    <div class="header">
       <nav>
         <ul>
-          <li style="font-weight: bolder; font-size: 32px;margin-top: -15px; margin-left: -90px;">Métricas.ong</li>
+          <h3 style="font-weight: bolder; font-size: 32px;margin-left: -40px;margin-top: 10px;">Métricas.ong</h3>
           <li></li>
           <li>Menú</li>
           <li>Política</li>
@@ -44,7 +43,7 @@
           Realizamos un análisis de los datos de denuncias al 147 por avistamientos de ratas. Nuestro interés se centra en
           observar si existe alguna diferencia en los datos teniendo en cuenta el tipo de barrio. Por lo tanto elegimos tres barrios
           muy distintos: Palermo, barrio con grandes polos gastronómicos y zonas de comercio, Saavedra, barrio
-          residencial y de parques, y por último Balvanera, barrio de microcentro en zona de eficios y oficinas. 
+          residencial y de parques, y por último Balvanera, barrio de microcentro en zona de edificios y oficinas. 
       </p>
 
   
@@ -67,6 +66,9 @@
           Podemos observar como en determinados meses las solicitudes aumentan significativamente. Tal como se ve en la visualización, se dan máximos en febrero, junio, octubre y noviembre, en los barrios de Palermo y Balvanera. Sin embargo, en el barrio de Saavedra (con la menor cantidad de denuncias de los tres) se mantienen más estables las solicitudes a lo largo del año, alcanzando su máximo en 
           noviembre. 
         </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. 
+        </p>
        
         <h3>Los horarios más populares de denuncias son al mediodía</h3>
     
@@ -75,29 +77,31 @@
           <mark style="color:#fcaf38;background-color:white;font-weight: 600;"> Balvanera</mark> y <mark style="color:#f95335;background-color:white;font-weight:600;"> Saavedra </mark> entre enero y diciembre de 2021. </h2>
                
         </p>
-        <div style="padding-left: 5%; margin-top: 25px; margin-bottom: 25px;" class="chart" id="vis_2"></div> 
+        <div style="padding-left: 5%; margin-top: 10px; margin-bottom: 25px;width:770px" class="chart" id="vis_2"></div> 
         
         <p>
           Cabe destacar que existe una amplia diferencia en la cantidad de solicitudes de cada barrio.
           En este caso, los individuos de los tres barrios tienen un comportamiento similar en cuanto a horario para hacer su denuncia, siendo el máximo de solicitudes entre las 08 y 15hrs
           y el mínimo entre las 04 y 07hrs.
         </p>
+
+        <p>Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu.</p>
         
 
-        <h3> Las ubicaciones favoritas de los roedores.</h3></h3>
+        <h3> Las ubicaciones favoritas de los roedores son en la ciudad</h3></h3>
        <p> Mapa de cada barrio con las ubicaciones de las denuncias efectuadas en <mark style="color:#50a3a4;background-color:white;font-weight: 600;"> Palermo</mark>,
         <mark style="color:#fcaf38;background-color:white;font-weight:600 ;"> Balvanera</mark> y <mark style="color:#f95335;background-color:white;font-weight: 600;">Saavedra</mark>, en el 2021. Categorizadas como denuncias abiertas o cerradas. </p> 
       </section>
 
       <div class="container">
-        <div class="chartx" id="vis3"></div>
-        <div class="chartx" id="vis4"></div>
         <div class="chartx" id="vis5"></div>
+        <div class="chartx" id="vis4"></div>
+        <div class="chartx" id="vis3"></div>
       </div>
 
 
-          <div style="margin-left: 280px;" class="box-container">
-            <div class="box red-box"></div>
+          <div style="margin-left: 240px;" class="box-container">
+            <div class="box blue-box"></div>
             <p class="box-description">Abierto</p>
             <div class="box black-box"></div>
             <p class="box-description">Cerrado</p>
@@ -110,7 +114,7 @@
             <p class="box-description">Cerrado</p>
           </div>
           <div class="box-container">
-            <div class="box blue-box"></div>
+            <div class="box red-box"></div>
             <p class="box-description">Abierto</p>
             <div class="box black-box"></div>
             <p class="box-description">Cerrado</p>
@@ -121,12 +125,14 @@
         <p style="margin-top: -100px;"> En Saavedra y Palermo vemos las que las zonas afectadas están centralizadas en una parte del barrio. En Balvanera la presencia de ratas esta distribuida en todo el barrio. 
           Las diferencias entre los barrios puede deberse a donde se produce mayor cantidad de basura. Así mismo, podemos evidenciar   
         que existen menos denuncias de roedores en espacios verdes.</p>
+        <p>Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. </p>
+        <hr style="margin-top: 30px;">
 
     <h5>
 
     <p>Fuente: <mark style="font-weight: 500; background-color: #fff;">Sistema Único de Atención Ciudadana de la Ciudad de Buenos Aires.</mark></p>
     <p>Autores: <mark style="font-weight: 500; background-color: #fff;">Lara Rodrigues La Moglie y Chantal Levi.</mark></p>
-    <p>Metodología: <mark style="font-weight: 500; background-color: #fff;">...</mark></p>
+    <p>Metodología: <mark style="font-weight: 500; background-color: #fff;">Realizamos un recorte de los datos provistos por el SUACI, especializándonos en denuncias por desratización. Luego modificamos dicho archivo creando nuevas columnas de datos como 'mes_prestacion', 'hora_agrupada', etc. con agrupaciones y transformaciones de los datos ya existentes. Filtramos los datos de tres barrios: Palermo, Balvanera y Saavedra.</mark></p>
 
 </h5>
 </section>

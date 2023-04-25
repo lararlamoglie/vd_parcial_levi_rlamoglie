@@ -1,5 +1,5 @@
-*{
-    font-family:Assistant, Verdana, Geneva, Tahoma, sans-serif
+body{
+    font-family:Assistant, sans-serif
 }
 section{
     margin-top: 80px;
@@ -26,6 +26,11 @@ h3{
     margin: 2em 0 0.5em 0.5em;
     font-weight: 600;
 
+}
+h5{
+  font-weight: 800;
+  font-size: 0.8em;
+  margin-top: 0px;
 }
 p{
     font-size: 1.2em;
@@ -59,14 +64,17 @@ header {
     list-style: none;
     display: flex;
     gap: 70px;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-left: 70px;
+  }
+  li{
+    margin-top: 25px;
   }
 
   .container {
     margin-top: 35px;
     overflow: auto;
-    margin-left: 180px;
+    margin-left: 150px;
 
 
   }
@@ -86,7 +94,7 @@ header {
 
   .box-container {
     display: inline-flex;
-    margin-left: 170px;
+    margin-left: 190px;
     margin-bottom: 60px;
     width: 100px,
 
