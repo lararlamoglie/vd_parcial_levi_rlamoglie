@@ -1,5 +1,5 @@
-const mapaFetch2 = d3.json('../../data/barrios-caba2.geojson')
-const dataFetch4 = d3.dsv(',', '../../data/147_desratizacion.csv', d3.autoType)
+const mapaFetch2 = d3.json('https://lararlamoglie.github.io/vd_parcial_levi_rlamoglie/data/barrios-caba2.geojson')
+const dataFetch4 = d3.dsv(',', 'https://lararlamoglie.github.io/vd_parcial_levi_rlamoglie/data/147_desratizacion.csv', d3.autoType)
   .then(data => data.filter(d => d.domicilio_barrio === "BALVANERA"))
 
 Promise.all([mapaFetch2, dataFetch4]).then(([barrios, data]) => {
